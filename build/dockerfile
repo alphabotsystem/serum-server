@@ -3,21 +3,20 @@ FROM node:13
 # Make a directory for the service
 WORKDIR /usr/src/serum-server
 
-# Install dependencies
-COPY ./services/serum/entrypoint.sh ./
+# Install Yarn
 RUN apt-get -y update \
 	&& apt-get -y install yarn \
 	&& apt-get clean
 
 # Install dependencies
-ADD ./services/serum/package.json ./services/serum/yarn.lock ./
+ADD ./package.json ./yarn.lock ./
 RUN yarn
 
 # Copy source code
-COPY ./services/serum/app ./app
+COPY ./app ./app
 
 # Pass required credentials
 ENV GOOGLE_APPLICATION_CREDENTIALS="/run/secrets/google-cloud-auth/key"
 
 # Run
-ENTRYPOINT ["bash", "./entrypoint.sh"]
+ENTRYPOINT ["node", "app/serum_server.js"]
