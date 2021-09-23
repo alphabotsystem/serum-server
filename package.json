@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@google-cloud/error-reporting": "^2.0.3",
+    "@google-cloud/firestore": "^4.12.0",
+    "@project-serum/serum": "^0.13.37",
+    "@solana/spl-token-registry": "^0.2.114",
+    "@solana/web3.js": "^1.14.0",
+    "async-mutex": "^0.3.1",
+    "uuid": "^8.3.2",
+    "zeromq": "6.0.0-beta.6"
+  },
+  "name": "serum",
+  "version": "1.0.0",
+  "description": "Serum data serving server for Alpha Bot",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphabotsystem/Alpha.git"
+  },
+  "author": "Alpha Bot System",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/alphabotsystem/Alpha/issues"
+  },
+  "homepage": "https://www.alphabotsystem.com"
+}
