@@ -1,4 +1,4 @@
-FROM node:13
+FROM node:16
 
 # Make a directory for the service
 WORKDIR /usr/src/serum-server
